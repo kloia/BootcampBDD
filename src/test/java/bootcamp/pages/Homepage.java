@@ -21,6 +21,13 @@ public class Homepage {
     @FindBy(className = "logo")
     public WebElement logo;
 
+    @FindBy(id = "gh-search-input")
+    public WebElement searchBox;
+
+
+    @FindBy(css = "[aria-label='submit search']")
+    public WebElement searchIcon;
+
 
 
     public void chooseUS(){
@@ -33,5 +40,12 @@ public class Homepage {
 
     public void verifyLogo(){
         Assert.assertTrue(logo.isDisplayed());
+    }
+
+    public void searchFor(String searchKey) {
+        searchBox.click();
+        searchBox.sendKeys(searchKey);
+        searchIcon.click();
+
     }
 }
