@@ -1,7 +1,9 @@
 package bootcamp.pages;
 
 import bootcamp.utils.Driver;
+import bootcamp.utils.Helper;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -47,5 +49,14 @@ public class Homepage {
         searchBox.sendKeys(searchKey);
         searchIcon.click();
 
+    }
+
+    public void openDropdown(String dropdown) {
+        String locator = "//span[text()='" + dropdown + "']";
+        Driver.get().findElement(By.xpath(locator)).click();
+    }
+
+    public void openSubmenu(String submenu) {
+        Helper.clickWithLinkText(submenu);
     }
 }
