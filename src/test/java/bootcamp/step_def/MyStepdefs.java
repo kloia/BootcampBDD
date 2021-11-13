@@ -1,8 +1,6 @@
 package bootcamp.step_def;
 
-import bootcamp.pages.Homepage;
-import bootcamp.pages.SearchResultPage;
-import bootcamp.pages.SiginPage;
+import bootcamp.pages.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,6 +10,8 @@ public class MyStepdefs {
     Homepage homepage = new Homepage();
     SearchResultPage searchResultPage = new SearchResultPage();
     SiginPage siginPage = new SiginPage();
+    CreditCardsPage creditCardsPage = new CreditCardsPage();
+    CardApplicationPage cardApplicationPage = new CardApplicationPage();
 
     @Given("homepage is open")
     public void homepageIsOpen() {
@@ -53,5 +53,20 @@ public class MyStepdefs {
     @Then("sign in page should open")
     public void signInPageShouldOpen() {
         siginPage.verifyTitle();
+    }
+
+    @And("I open my best buy credit card page")
+    public void iOpenMyBestBuyCreditCardPage() {
+        homepage.openMyCreditCardPage();
+    }
+
+    @When("I open application page")
+    public void iOpenApplicationPage() {
+        creditCardsPage.openApplyPage();
+    }
+
+    @Then("application page should open")
+    public void applicationPageShouldOpen() {
+        cardApplicationPage.verifyTitle();
     }
 }

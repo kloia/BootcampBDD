@@ -30,6 +30,8 @@ public class Homepage {
     @FindBy(css = "[aria-label='submit search']")
     public WebElement searchIcon;
 
+    @FindBy(css = "a.btn.btn-white.btn-sm")
+    public WebElement learnmoreButton;
 
 
     public void chooseUS(){
@@ -58,5 +60,9 @@ public class Homepage {
 
     public void openSubmenu(String submenu) {
         Helper.clickWithLinkText(submenu);
+    }
+
+    public void openMyCreditCardPage() {
+        learnmoreButton.click();
     }
 }

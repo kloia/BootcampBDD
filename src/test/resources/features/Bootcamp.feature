@@ -20,6 +20,12 @@ Feature: bootcamp tests
     Then sign in page should open
 
 
+  Scenario: credit card application page test
+    And I open my best buy credit card page
+    When I open application page
+    Then application page should open
+
+
 
 
 
