@@ -17,6 +17,6 @@ public class SearchResultPage {
 
 
     public void verifySearchResult() {
-        Assert.assertTrue(resultTitle.getText().contains("Results for"));
+        Assert.assertTrue(resultTitle.getText().contains("Results forffffffff"));
     }
 }

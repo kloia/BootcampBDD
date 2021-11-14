@@ -69,4 +69,5 @@ public class MyStepdefs {
     public void applicationPageShouldOpen() {
         cardApplicationPage.verifyTitle();
     }
+
 }

@@ -26,7 +26,5 @@ public class Helper {
             if(!originTab.equals(tab))
                 Driver.get().switchTo().window(tab);
         }
-
-
     }
 }
